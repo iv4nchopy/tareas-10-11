@@ -1,0 +1,117 @@
+/* ======== ESTILO GENERAL ======== */
+body {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #111;
+    padding: 20px 0;
+}
+
+.titulo {
+    color: #00aaff;
+    font-size: 2em;
+    animation: fadeIn 1.2s ease;
+}
+
+/* Animaciones básicas */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-15px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes mover {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-5px);}
+}
+
+/* Botones */
+.boton {
+    background-color: #00aaff;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+.boton:hover {
+    background-color: #0088cc;
+    transform: scale(1.05);
+    animation: mover 1s infinite ease-in-out;
+}
+
+/* ======= Galería ======= */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.galeria img {
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Animaciones diferentes */
+.anim1 { animation: mover 2s infinite; }
+.anim2 { animation: fadeIn 3s infinite alternate; }
+.anim3 { transform: rotate(0deg); transition: 0.5s; }
+.anim3:hover { transform: rotate(10deg); }
+.anim4 { filter: brightness(0.7); transition: 0.5s; }
+.anim4:hover { filter: brightness(1.2); }
+.anim5:hover { transform: scale(1.1); transition: 0.5s; }
+
+/* ======= Tabla ======= */
+table {
+    margin: 30px auto;
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 700px;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #444;
+}
+
+th {
+    background-color: #00aaff;
+    color: white;
+    animation: mover 2s infinite;
+}
+
+td button {
+    background-color: #00aaff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+td button:hover {
+    background-color: #0088cc;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #999;
+    padding: 15px;
+    margin-top: 40px;
+}
